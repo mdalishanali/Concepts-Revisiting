@@ -32,7 +32,16 @@ function bubbleSort(arr, n) {
   console.log(arr);
 }
 bubbleSort(arr, n);
-
+/**n==6 
+ * ---INDEX----
+ * i==5  j=0
+ * i==4   j=1
+ * i==3 j=2
+ * i==2  j=3
+ * i=1  j=4
+ * i=0  j=5
+And did I understood n-i-1 correctly? Is it meant to skip the comparison 
+of last item in array, because we don't have element after him?  */
 /**The above function always runs O(n^2) time even if the array is sorted.
  *  It can be optimized by stopping the algorithm if the inner loop didn’t cause any swap.
  */
