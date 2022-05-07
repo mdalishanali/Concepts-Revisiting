@@ -19,11 +19,11 @@ Constraints
  * itself. 2, 3, 5, 7, 11, 13, ... are first few prime numbers.
  */
 function checkPrime(num) {
-  num = Math.abs(num);
   if (num <= 1) {
     console.log("NO");
     return;
   }
+  //let m = Math.sqrt(7);//2.6457513110645907
   for (let i = 2; i <= Math.sqrt(num); i++) {
     if (num % i == 0) {
       console.log("NO");
@@ -32,5 +32,13 @@ function checkPrime(num) {
   }
   console.log("YES");
 }
-let num = 49;
+let num = 9;
 checkPrime(num);
+
+
+/**
+ * Time Complexity
+O(sqrt{N})
+ Space Complexity
+O(1), i.e., constant space complexity.
+ */

@@ -23,17 +23,20 @@ function BinaryReprstnBitwiseOperator(num) {
   }
   console.log(ans);
 }
-let num = 7;
+let num = 9;
 BinaryReprstnBitwiseOperator(num);
 
 function BinaryRepSimple(num) {
     let ans = new Array(2).fill(0).join("")
 //   let ans = "";
+let count=0;
   while (num > 0) {
+    count++;
     let temp = num % 2;
     ans += temp;
     num = Math.floor(num / 2);
   }
   console.log(ans);
+  console.log(count);
 }
-BinaryRepSimple();
+BinaryRepSimple(9);
