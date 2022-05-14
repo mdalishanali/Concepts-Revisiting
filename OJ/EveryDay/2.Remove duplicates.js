@@ -62,10 +62,10 @@ RemoveDup(arr,n);
     //without using extra space
 
 //first value is always going to same bcz it is soreted
-    let m = [1,1,1,4,5,5,6,7];
+let m = [1,1,1,4,5,5,6,7];
 let a = []
-    for(let i=1; i<m.length; i++){
-        if(m[i]!==m[i+1]){
+    for(let i=0; i<m.length; i++){
+        if(m[i]!==m[i-1]){
             a.push(m[i])
         }
     }
@@ -76,9 +76,9 @@ let a = []
             console.log(arr,n);
             let left =1;
             for(let i = 1; i<n; i++){
-                if(arr[i]!==arr[i-1]){
-                        arr[left]=arr[i];
-                        left++;
+                if(arr[i]!==arr[i+1]){
+                    arr[left]=arr[i];
+                    left++;
                 }
             }
             console.log(left,arr);
