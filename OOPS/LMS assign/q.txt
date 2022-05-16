@@ -1,0 +1,62 @@
+ONCEPTUAL VIDEO QUESTIONS
+Conceptual Video Topics
+What is EventLoop? Explain in brief?
+
+Flexbox vs Grid system
+
+Event Loop and Async javascript
+
+callback promises/ async await, what is Promise.all?
+
+how can you make API requests in a parallel manner and in waterfall manner?
+
+Can you write a polyfill for promises?
+
+var, let and const?
+
+what are the differences, and how do scopes matter for each?
+
+Redux architecture
+
+explain redux to a five year old?
+
+what are thunks? why do you need them?
+
+what are action creators?
+
+what are reducers?
+
+how does reducers update the store?
+
+can you implement your own redux store?
+
+Stateful vs Stateless Components?
+
+can you write a todo application using class components?
+
+what is react, virtual dom, and how it works
+
+explain the difference when working directly with DOM
+
+what are the benefits?
+
+what is reconciliation and react fibre?
+
+what is react state management?
+
+what are the hooks you can use for state management?
+
+what is the difference between redux and context api?
+
+explain lifecycle diagram with hooks
+
+different ways to use useEffect?
+
+MongoDB vs MySql,
+
+explain CRUD operations in mongoDB
+
+Authentication and few of its types
+
+Submit
+submit a github readme file with the link attached

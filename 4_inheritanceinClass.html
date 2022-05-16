@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>inheritance using class</h1>
+</body>
+</html>
+<script>
+    class BankAccount{
+        customerName;
+        accountNumber;
+        balance=0;
+        constructor(customerName,balance=0){
+            this.customerName=customerName;
+            this.accountNumber=Date.now();
+            this.balance=balance;
+        }
+        deposit(amount){
+            this.balance+=amount;
+        }
+        withdraw(amount){
+            this.balance-=amount;
+        }
+    }
+
+
+    class CurrentAccount extends BankAccount{
+        transactionLimit=50000;
+        constructor(customerName,balance=0){
+            //using super keyword we are giving these val to paren
+            super(customerName,balance);
+        }
+        takeBusinessLogic(amount){
+            console.log('Take business loan'+amount);
+        }
+    
+    }
+
+    class SavingAccount extends BankAccount{
+        transactionLimit=10000;
+        constructor(customerName,balance=0){
+            super(customerName,balance)
+        }
+        takePersonalLoan(amount){
+            console.log("taking personal loan"+amount);
+        }
+    }
+
+    const alishanAccount = new CurrentAccount("Alishan",2000);
+    console.log(alishanAccount);
+</script>

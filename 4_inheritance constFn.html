@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>inheritance using constructor function</h1>
+</body>
+</html>
+
+<script>
+    
+function BankAccount(customerName, balance = 0) {
+    this.customerName = customerName;
+    this.accountNumber = Date.now();
+    this.balance = balance;
+}
+
+BankAccount.prototype.deposit = function (amount) {
+    this.balance += amount;
+};
+
+BankAccount.prototype.withdraw = function (amount) {
+    this.balance -= amount;
+};
+
+function CurrentAccount(customerName, balance = 0) {
+    BankAccount.call(this, customerName, balance);
+    this.transactionLimit = 50000;
+}
+
+CurrentAccount.prototype = Object.create(BankAccount.prototype);
+
+CurrentAccount.prototype.takeBusinessLoan = function (amount) {
+    console.log('Taking business loan: ' + amount);
+};
+
+function SavingAccount(customerName, balance = 0) {
+    BankAccount.call(this, customerName, balance);
+    this.transactionLimit = 10000;
+}
+SavingAccount.prototype = Object.create(BankAccount.prototype);
+
+SavingAccount.prototype.takePersonalLoan = function (amount) {
+    console.log('Taking personal loan: ' + amount);
+};
+
+const rakeshAccount = new SavingAccount('Rakesh K', 500);
+rakeshAccount.deposit(500);
+rakeshAccount.withdraw(100);
+rakeshAccount.takePersonalLoan(40000);
+// console.log(rakeshAccount);
+</script>
