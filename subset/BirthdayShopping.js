@@ -11,10 +11,8 @@ function BirthdayShop(arr, k) {
     if (index == arr.length) {
       if (subset.length == k) {
           //subset.sort((a,b)=>a-b)
-
           ans.push(subset);
           console.log(ans);
-
       }
       return;
     }
